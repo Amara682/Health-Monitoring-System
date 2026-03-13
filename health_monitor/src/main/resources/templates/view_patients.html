@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Patients</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            margin:0;
+            background:#f4f8ff;
+        }
+
+        header{
+            background:#0a3d62;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#1e90ff;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            margin:15px;
+            font-size:18px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        h2{
+            text-align:center;
+            margin-top:30px;
+            color:#0a3d62;
+        }
+
+        table{
+            width:85%;
+            margin:30px auto;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        th,td{
+            padding:12px;
+            border:1px solid #ccc;
+            text-align:center;
+        }
+
+        th{
+            background:#1e90ff;
+            color:white;
+        }
+
+        footer{
+            background:#0a3d62;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:60px;
+            font-size:16px;
+            line-height:1.8;
+        }
+
+    </style>
+
+    <script>
+
+        function loadPatients(){
+
+            fetch("/all")
+                .then(response => response.json())
+                .then(data => {
+
+                    let rows="";
+
+                    data.forEach(p=>{
+
+                        rows+=`
+<tr>
+<td>${p.id}</td>
+<td>${p.name}</td>
+<td>${p.age}</td>
+<td>${p.gender}</td>
+<td>${p.disease}</td>
+<td>${p.doctor}</td>
+</tr>
+`;
+
+                    });
+
+                    document.getElementById("patients").innerHTML=rows;
+
+                });
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="loadPatients()">
+
+<header>
+    <h1>Velammal Hospital</h1>
+    <p>Patient Records</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/addpage">Add Patient</a>
+    <a href="/view">View Patients</a>
+    <a href="#">Doctors</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<h2>Registered Patients</h2>
+
+<table>
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Disease</th>
+        <th>Docter</th>
+
+    </tr>
+
+    <tbody id="patients"></tbody>
+
+</table>
+
+<footer>
+    <p>Velammal Hospital</p>
+    <p>Madurai, Tamil Nadu | Phone: +91 9876543210 | Email: velammalhospital@gmail.com</p>
+    <p>© 2026 Velammal Hospital | Healthcare Management System</p>
+</footer>
+
+</body>
+</html>

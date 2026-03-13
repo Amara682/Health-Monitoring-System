@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Velammal Hospital</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            margin:0;
+            background:#f4f8ff;
+        }
+
+
+        header{
+            background:#0a3d62;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+
+        nav{
+            background:#1e90ff;
+            padding:12px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            margin:15px;
+            font-size:18px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            text-decoration:underline;
+        }
+
+        .banner img{
+            width:100%;
+            height:350px;
+            object-fit:cover;
+        }
+
+       .hero{
+            text-align:center;
+            padding:50px;
+        }
+
+        .hero h1{
+            font-size:40px;
+            color:#0a3d62;
+        }
+
+        .hero p{
+            font-size:18px;
+            width:70%;
+            margin:auto;
+            line-height:1.6;
+        }
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 25px;
+            background:#1e90ff;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-size:18px;
+        }
+
+        .btn:hover{
+            background:#0a3d62;
+        }
+        .services{
+            text-align:center;
+            padding:40px;
+        }
+
+        .services h2{
+            color:#0a3d62;
+        }
+
+        .service-box{
+            display:inline-block;
+            width:220px;
+            margin:20px;
+            padding:20px;
+            background:white;
+            border-radius:10px;
+            box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+
+        .doctors{
+            text-align:center;
+            padding:40px;
+            background:#eef3ff;
+        }
+
+        .doctors h2{
+            color:#0a3d62;
+        }
+
+        .doctor-card{
+            display:inline-block;
+            margin:20px;
+        }
+
+        .doctor-card img{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+        }
+
+        .doctor-card p{
+            font-weight:bold;
+        }
+
+
+        .stats{
+            text-align:center;
+            padding:40px;
+        }
+
+        .stat-box{
+            display:inline-block;
+            width:200px;
+            margin:20px;
+            font-size:20px;
+            color:#0a3d62;
+            font-weight:bold;
+        }
+
+        footer{
+            background:#0a3d62;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:60px;
+            font-size:16px;
+            line-height:1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Velammal Hospital</h1>
+    <p>Advanced Health Monitoring System</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/addpage">Add Patient</a>
+    <a href="/view">View Patients</a>
+    <a href="#">Doctors</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="banner">
+    <img src="/images/hospital.jpg" alt="Hospital">
+</div>
+
+<div class="hero">
+
+    <h1>Welcome to Velammal Hospital</h1>
+
+    <p>
+        Velammal Hospital provides high-quality healthcare services using advanced
+        medical technology and experienced doctors. Our Health Monitoring System
+        helps manage patient information efficiently and ensures better medical
+        care and record maintenance.
+    </p>
+
+    <a class="btn" href="/addpage">Register New Patient</a>
+
+</div>
+
+<div class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-box">
+        <h3>Emergency Care</h3>
+        <p>24/7 emergency medical services for all patients.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>Health Monitoring</h3>
+        <p>Digital monitoring and management of patient records.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>Specialist Doctors</h3>
+        <p>Experienced specialists across multiple departments.</p>
+    </div>
+
+</div>
+
+<div class="doctors">
+
+    <h2>Our Doctors</h2>
+
+    <div class="doctor-card">
+        <img src="/images/kumar.jpg">
+        <p>Dr. Kumar – Cardiologist</p>
+    </div>
+
+    <div class="doctor-card">
+        <img src="/images/meena.jpg">
+        <p>Dr. Meena – Pediatrician</p>
+    </div>
+
+    <div class="doctor-card">
+        <img src="/images/ravi.jpg">
+        <p>Dr. Ravi – Neurologist</p>
+    </div>
+
+</div>
+
+<div class="stats">
+
+    <h2>Hospital Statistics</h2>
+
+    <div class="stat-box">
+        5000+ Patients Treated
+    </div>
+
+    <div class="stat-box">
+        120+ Doctors
+    </div>
+
+    <div class="stat-box">
+        20+ Departments
+    </div>
+
+    <div class="stat-box">
+        24/7 Emergency Care
+    </div>
+
+</div>
+
+<footer>
+    <p>Velammal Hospital</p>
+    <p>Madurai, Tamil Nadu | Phone: +91 9876543210 | Email: velammalhospital@gmail.com</p>
+    <p>© 2026 Velammal Hospital | Healthcare Management System</p>
+</footer>
+
+</body>
+</html>

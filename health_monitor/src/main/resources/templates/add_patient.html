@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Patient</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            margin:0;
+            background:#eef3ff;
+        }
+
+        header{
+            background:#0a3d62;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#1e90ff;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            margin:15px;
+            font-size:18px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .container{
+            width:450px;
+            margin:50px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#0a3d62;
+        }
+
+        input,select{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#1e90ff;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#0a3d62;
+        }
+        footer{
+            background:#0a3d62;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:60px;
+            font-size:16px;
+            line-height:1.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Velammal Hospital</h1>
+    <p>Patient Registration</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/addpage">Add Patient</a>
+    <a href="/view">View Patients</a>
+    <a href="#">Doctors</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>Add Patient Details</h2>
+    <form action="/add" method="post">
+
+        <input type="text" name="name" placeholder="Patient Name" required>
+
+        <input type="number" name="age" placeholder="Age" required>
+
+        <select name="gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <input type="text" name="disease" placeholder="Disease">
+
+        <input type="text" name="doctor" placeholder="Doctor Name">
+
+        <button type="submit">Submit Patient</button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>Velammal Hospital</p>
+    <p>Madurai, Tamil Nadu | Phone: +91 9876543210 | Email: velammalhospital@gmail.com</p>
+    <p>© 2026 Velammal Hospital | Healthcare Management System</p>
+</footer>
+
+</body>
+</html>
